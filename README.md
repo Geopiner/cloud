@@ -38,7 +38,7 @@ Here you’ll find:
 
 Jump directly to my daily progress logs here:
 
-[📅 Daily Log](./Daily%20Log/)
+[📅 Daily Log](./daily-log/)
 
 ---
 
