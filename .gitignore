@@ -1,3 +1,13 @@
+# AWS credentials
 Admin_accessKeys.csv
-george-key.pem
-scripts/admin-creds.sh
+George-key.pem
+
+# Terraform state files and cache
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# OS or editor files (optional)
+.DS_Store
+*.swp
+*.bak
