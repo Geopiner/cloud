@@ -1,51 +1,55 @@
 # George's Cloud Engineering Roadmap
 
-Welcome to my step-by-step journey to becoming a Cloud Engineer.  
-This repo documents all my progress, learnings, and hands-on labs with AWS and Terraform — starting from the fundamentals and building towards job-ready skills.
+Welcome to my Cloud Engineering journey! This repository documents everything I learn, build, and troubleshoot as I progress from beginner to job-ready cloud engineer.
 
 ---
 
-# Day 1: AWS Networking & EC2 Setup with Nginx
+## About This Repo
 
-## Overview
+This repo serves as a central hub for my cloud computing projects, notes, and infrastructure-as-code. I’m focusing mainly on AWS and Terraform, with a mix of hands-on labs, scripting, and best practices.
 
-Day 1 focuses on building a solid AWS networking foundation and launching your first EC2 instance with Nginx, all managed by Terraform and some manual hands-on steps.
+Here you’ll find:
 
----
-
-## What You Built
-
-- **VPC** with CIDR `10.0.0.0/16`  
-- **Public subnet** with CIDR `10.0.1.0/24` in availability zone `eu-west-2a`  
-- **Internet Gateway** attached to the VPC  
-- **Route Table** routing all outbound traffic (`0.0.0.0/0`) to the IGW  
-- **Security Group** allowing SSH (port 22) and HTTP (port 80) inbound traffic  
-- **EC2 instance** (`t3.micro`) launched in the public subnet with:  
-  - Public IP assigned  
-  - Key pair for SSH access  
-- **Manual Nginx installation** on EC2 with a custom HTML page  
-- **Terraform outputs** configured to retrieve the EC2 public IP  
-- **Terraform variables** introduced to make config reusable and flexible  
-- **Git best practice**: excluded private SSH key from version control
+- General roadmap and goals  
+- Scripts and automation helpers  
+- Infrastructure configurations  
+- Daily logs capturing lessons, commands, and outcomes  
 
 ---
 
-## Commands & Tips
+## Structure
 
-```bash
-# Terraform commands
-terraform init
-terraform plan
-terraform apply
-terraform output instance_public_ip
+- `/scripts/` — Helper scripts like credential loaders  
+- `/terraform/` — Terraform configurations organized by project or day  
+- `/Daily Log/` — Daily detailed notes, walkthroughs, and progress reports  
 
-# SSH into EC2 (replace path as needed)
-ssh -i /path/to/george-key.pem ec2-user@$(terraform output -raw instance_public_ip)
+---
 
-# On the EC2 instance, manually install Nginx:
-sudo yum update -y
-sudo yum install -y nginx
-sudo systemctl start nginx
-sudo systemctl enable nginx
-echo '<h1>Nginx is live, George!</h1>' | sudo tee /usr/share/nginx/html/index.html
-sudo systemctl reload nginx
+## How to Use This Repo
+
+- Follow the daily logs to see step-by-step progress  
+- Reuse Terraform configurations for your own projects  
+- Learn from troubleshooting notes and command snippets  
+- Keep sensitive info safe by respecting `.gitignore`  
+
+---
+
+## Navigation
+
+Jump directly to my daily progress logs here:
+
+[📅 Daily Log](./Daily%20Log/)
+
+---
+
+## Goals
+
+- Build solid foundational skills in AWS and Terraform  
+- Automate infrastructure deployment end-to-end  
+- Understand cloud security and best practices  
+- Prepare for AWS Solutions Architect Associate certification  
+- Develop job-ready projects for portfolio and interviews  
+
+---
+
+*This README will be updated as my journey progresses. Stay tuned!*
