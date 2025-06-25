@@ -29,21 +29,22 @@
 ## Commands & Snippets
 
 # Terraform commands
+```bash
 terraform init
 terraform plan
 terraform apply
-terraform output instance_public_ip
+terraform output instance_public_ip```
 
 # SSH into EC2 (replace path as needed)
-ssh -i /path/to/george-key.pem ec2-user@$(terraform output -raw instance_public_ip)
+```ssh -i /path/to/george-key.pem ec2-user@$(terraform output -raw instance_public_ip)```
 
 # On the EC2 instance, manually install Nginx:
-sudo yum update -y
+```sudo yum update -y
 sudo yum install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 echo '<h1>Nginx is live, George!</h1>' | sudo tee /usr/share/nginx/html/index.html
-sudo systemctl reload nginx
+sudo systemctl reload nginx```
 
 ## Notes & Lessons
 
