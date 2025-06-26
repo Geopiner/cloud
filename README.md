@@ -25,6 +25,16 @@ Here you’ll find:
 
 ---
 
+## Progress
+
+Currently working through:
+
+- Day 1: Core AWS concepts, EC2 instance provisioning, and basic networking  
+- Day 2: Custom VPC, public/private subnets, IGW & NAT gateway, security groups, EC2 with Terraform  
+- Next up: Private subnet access, S3 integration, IAM roles, and Terraform remote state  
+
+---
+
 ## How to Use This Repo
 
 - Follow the daily logs to see step-by-step progress  
@@ -52,4 +62,4 @@ Jump directly to my daily progress logs here:
 
 ---
 
-*This README will be updated as my journey progresses. Stay tuned!*
+*This README will be updated as I progress on my journey.*
